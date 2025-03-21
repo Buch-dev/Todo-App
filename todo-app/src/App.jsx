@@ -96,7 +96,7 @@ function App() {
         </div>
         {/* Todo Items */}
         {todos.map((todo) => {
-          <div key={todo.id} className="w-full border">
+          <div key={todo.id} className="w-full">
             <TodoItem todo={todo} />
           </div>;
         })}
