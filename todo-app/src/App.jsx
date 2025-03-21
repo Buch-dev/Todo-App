@@ -3,6 +3,7 @@ import "./App.css";
 import Form from "./components/Form";
 import { ThemeProvider, useTheme } from "./contexts";
 import ThemeSwitcher from "./components/ThemeSwitcher";
+import TodoItem from "./components/TodoItem";
 
 function App() {
   const [themeMode, setThemeMode] = useState("light");
@@ -93,6 +94,12 @@ function App() {
           {/* Form Input */}
           <Form />
         </div>
+        {/* Todo Items */}
+        {todos.map((todo) => {
+          <div key={todo.id} className="w-full border">
+            <TodoItem todo={todo} />
+          </div>;
+        })}
       </main>
     </ThemeProvider>
   );
