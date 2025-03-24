@@ -16,7 +16,7 @@ function ThemeSwitcher() {
     document.body.style.backgroundColor = moon ? "#171823" : "#fafafa";
   };
   return (
-    <div>
+    <div className="cursor-pointer">
       <img
         src={moon ? "./icon-moon.svg" : "./icon-sun.svg"}
         alt="moon"
